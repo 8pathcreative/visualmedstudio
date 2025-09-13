@@ -31,7 +31,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-accent transition-colors">
-                  Custom Illustrations
+                  AR/VR
                 </a>
               </li>
               <li>
@@ -46,7 +46,7 @@ export function Footer() {
             <h3 className="font-sans font-bold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>hello@vismedstudio.com</li>
-              <li>(402) 926-4567</li>
+              <li>(402) 926-4557</li>
               <li>Omaha, NE</li>
             </ul>
           </div>

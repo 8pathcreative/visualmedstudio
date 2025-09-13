@@ -119,7 +119,7 @@ export function PortfolioGallery() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
 
                   {/* Overlay Actions */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -144,15 +144,21 @@ export function PortfolioGallery() {
                   </div>
 
                   {project.featured && <Badge className="absolute top-4 left-4 animate-pulse-glow">Featured</Badge>}
-                </div>
-
-                <div className="p-4">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="secondary" className="text-xs">
+                  <div className="absolute bottom-4 left-4">
+                    <Badge
+                      variant={
+                        filter !== "all" && filter === project.category
+                          ? "default"
+                          : "secondary"
+                      }
+                      className="text-xs transition-colors"
+                    >
                       {project.category}
                     </Badge>
                   </div>
+                </div>
 
+                <div className="p-4">
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-500">
                     {project.title}
                   </h3>
