@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Calendar, Building, Users, ExternalLink, Play } from "lucide-react"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectsPage() {
   const projects = [
@@ -89,172 +90,98 @@ export default function ProjectsPage() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <div className="bg-background text-foreground">
       <Header />
 
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-background via-accent/5 to-secondary/10">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="bg-accent/20 text-foreground border-accent/30 px-4 py-2 mb-6">Our Portfolio</Badge>
-            <h1 className="text-5xl lg:text-6xl font-black text-foreground mb-6">
-              Transforming Medical
-              <span className="block text-accent">Education & Care</span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Explore our award-winning projects that have revolutionized medical visualization, education, and patient
-              care across leading healthcare institutions worldwide.
-            </p>
-          </div>
+      <section className="bg-primary/10 py-20 text-center">
+        <div className="container">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Our Work
+          </h1>
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground">
+            Explore a selection of our most impactful medical visualization
+            projects. Each case study represents a unique challenge and a
+            successful collaboration.
+          </p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-16">
-            {projects.map((project, index) => (
+      <main className="py-16 sm:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
               <Card
                 key={project.id}
-                className={`glass-card hover-lift overflow-hidden ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+                className="overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               >
-                <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-cols-2" : ""}`}>
-                  {/* Project Image */}
-                  <div className="relative aspect-[4/3] lg:aspect-auto">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-accent text-accent-foreground">{project.category}</Badge>
-                    </div>
-                    <div className="absolute bottom-4 right-4">
-                      <Button
-                        size="icon"
-                        className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/20"
-                      >
-                        <Play className="w-5 h-5" />
-                      </Button>
-                    </div>
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40" />
+                  <Badge
+                    variant="secondary"
+                    className="absolute top-4 right-4"
+                  >
+                    {project.category}
+                  </Badge>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {project.description.substring(0, 100)}...
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech} variant="outline">
+                        {tech}
+                      </Badge>
+                    ))}
                   </div>
-
-                  {/* Project Details */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="space-y-6">
-                      <div>
-                        <div className="flex items-center gap-4 mb-4">
-                          <Badge variant="outline" className="text-xs">
-                            {project.year}
-                          </Badge>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Calendar className="w-4 h-4" />
-                            {project.duration}
-                          </div>
-                        </div>
-                        <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">{project.title}</h2>
-                        <p className="text-lg text-muted-foreground leading-relaxed mb-6">{project.description}</p>
-                      </div>
-
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-3">
-                          <Building className="w-5 h-5 text-accent" />
-                          <div>
-                            <p className="font-semibold text-foreground">Client</p>
-                            <p className="text-muted-foreground">{project.client}</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                          <Users className="w-5 h-5 text-accent" />
-                          <div>
-                            <p className="font-semibold text-foreground">Impact</p>
-                            <p className="text-muted-foreground">{project.results}</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <p className="font-semibold text-foreground mb-3">Technologies Used</p>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="secondary" className="text-xs">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="flex gap-4 pt-4">
-                        <Button className="bg-accent hover:bg-accent/90 text-primary">
-                          View Case Study
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Button>
-                        <Button variant="outline">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Live Demo
-                        </Button>
-                      </div>
+                  <div className="mt-6 flex justify-between items-center">
+                    <div className="text-sm text-muted-foreground">
+                      <span className="font-semibold">{project.client}</span>
                     </div>
+                    <Button asChild variant="link" className="pr-0">
+                      <Link href={`/projects/${project.id}`}>
+                        View Case Study
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </Card>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 bg-gradient-to-r from-accent to-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Project Impact</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Our medical visualization projects have transformed healthcare education and patient care worldwide
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: "200+", label: "Projects Completed", description: "Across 50+ institutions" },
-              { number: "1M+", label: "Students Impacted", description: "Enhanced learning outcomes" },
-              { number: "95%", label: "Client Satisfaction", description: "Repeat business rate" },
-              { number: "40%", label: "Average Improvement", description: "In comprehension scores" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold mb-1">{stat.label}</div>
-                <div className="text-sm opacity-80">{stat.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </main>
 
       {/* CTA Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">Ready to Start Your Project?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Let's discuss how we can create innovative medical visualization solutions for your institution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-primary px-8 py-4">
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="px-8 py-4 bg-transparent">
-                View More Work
-              </Button>
-            </div>
+      <section className="py-24 bg-primary/5">
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Have a Project in Mind?
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            Let's turn your complex medical data into a clear and compelling
+            visual story.
+          </p>
+          <div className="mt-8">
+            <Button asChild size="lg">
+              <Link href="/contact">Get a Free Consultation</Link>
+            </Button>
           </div>
         </div>
       </section>
 
       <Footer />
-    </main>
+    </div>
   )
 }

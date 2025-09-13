@@ -5,6 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Award, Trophy, Star, Medal, Briefcase as Certificate, Users, ExternalLink } from "lucide-react"
 import Link from "next/link";
 import Image from "next/image";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const awards = [
   {
@@ -126,6 +128,7 @@ const achievements = [
 export default function AwardsPage() {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-to-br from-card to-muted">
         <div className="container mx-auto px-4">
@@ -392,6 +395,7 @@ export default function AwardsPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }
