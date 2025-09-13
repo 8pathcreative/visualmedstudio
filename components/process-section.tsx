@@ -3,6 +3,24 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileText, MessageSquare, Code, Zap, CheckCircle } from "lucide-react"
+import CountUp from "react-countup"
+import { useInView } from "react-intersection-observer"
+
+const AnimatedStat = ({ value, label }: { value: number; label: string }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+        {inView ? <CountUp end={value} duration={2.5} /> : "0"}+
+      </div>
+      <p className="text-lg text-muted-foreground">{label}</p>
+    </div>
+  )
+}
 
 const processSteps = [
   {
@@ -86,21 +104,14 @@ export function ProcessSection() {
           </div>
         </div>
 
-        <div className="text-center mt-16 animate-slide-in-up stagger-6">
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Projects Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">25+</div>
-              <div className="text-muted-foreground">Healthcare Partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5+</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 animate-slide-in-up">
+          <AnimatedStat value={50} label="Projects Delivered" />
+          <AnimatedStat value={25} label="Healthcare Partners" />
+          <AnimatedStat value={5} label="Years Experience" />
+        </div>
+
+        <div className="max-w-8xl mx-auto mt-20">
+          {/* Additional content or call to action can go here */}
         </div>
       </div>
     </section>
