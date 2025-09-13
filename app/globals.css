@@ -1,0 +1,382 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to proper robbins egg blue (#5FB3D4) and midnight blue (#191970) color scheme */
+  --background: oklch(1 0 0); /* Pure white */
+  --foreground: oklch(0.25 0.15 258); /* Midnight blue for text */
+  --card: oklch(0.98 0.02 200); /* Very light robbins egg blue for cards */
+  --card-foreground: oklch(0.25 0.15 258);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.15 258);
+  --primary: oklch(0.25 0.15 258); /* Midnight blue primary */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.72 0.12 200); /* Robbins egg blue secondary */
+  --secondary-foreground: oklch(0.25 0.15 258);
+  --muted: oklch(0.96 0.02 200);
+  --muted-foreground: oklch(0.45 0.08 258);
+  --accent: oklch(0.62 0.15 200); /* Darker robbins egg blue accent */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.55 0.25 15);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.92 0.02 200);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.62 0.15 200);
+  --chart-1: oklch(0.25 0.15 258);
+  --chart-2: oklch(0.72 0.12 200);
+  --chart-3: oklch(0.55 0.25 15);
+  --chart-4: oklch(0.65 0.25 330);
+  --chart-5: oklch(0.35 0.01 258);
+  --radius: 0.75rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.25 0.15 258);
+  --sidebar-primary: oklch(0.25 0.15 258);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.72 0.12 200);
+  --sidebar-accent-foreground: oklch(0.25 0.15 258);
+  --sidebar-border: oklch(0.92 0.02 200);
+  --sidebar-ring: oklch(0.62 0.15 200);
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  /* Updated dark mode colors to maintain midnight blue and robbins egg blue theme */
+  --background: oklch(0.08 0.05 258);
+  --foreground: oklch(0.95 0.02 200);
+  --card: oklch(0.12 0.05 258);
+  --card-foreground: oklch(0.95 0.02 200);
+  --popover: oklch(0.08 0.05 258);
+  --popover-foreground: oklch(0.95 0.02 200);
+  --primary: oklch(0.72 0.12 200);
+  --primary-foreground: oklch(0.08 0.05 258);
+  --secondary: oklch(0.25 0.15 258);
+  --secondary-foreground: oklch(0.95 0.02 200);
+  --muted: oklch(0.15 0.05 258);
+  --muted-foreground: oklch(0.65 0.05 258);
+  --accent: oklch(0.62 0.15 200);
+  --accent-foreground: oklch(1 0 0); /* Fixed accent-foreground for better contrast in dark mode */
+  --destructive: oklch(0.55 0.25 15);
+  --destructive-foreground: oklch(0.95 0.02 200);
+  --border: oklch(0.15 0.05 258);
+  --input: oklch(0.15 0.05 258);
+  --ring: oklch(0.62 0.15 200);
+  --chart-1: oklch(0.72 0.12 200);
+  --chart-2: oklch(0.62 0.15 200);
+  --chart-3: oklch(0.55 0.25 15);
+  --chart-4: oklch(0.65 0.25 330);
+  --chart-5: oklch(0.65 0.05 258);
+  --sidebar: oklch(0.08 0.05 258);
+  --sidebar-foreground: oklch(0.95 0.02 200);
+  --sidebar-primary: oklch(0.72 0.12 200);
+  --sidebar-primary-foreground: oklch(0.08 0.05 258);
+  --sidebar-accent: oklch(0.15 0.05 258);
+  --sidebar-accent-foreground: oklch(0.95 0.02 200);
+  --sidebar-border: oklch(0.15 0.05 258);
+  --sidebar-ring: oklch(0.62 0.15 200);
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Updated font configuration to use Inter */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-inter), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    /* Added performance optimizations */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-bold;
+    /* Optimized text rendering for headings */
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 100px;
+  }
+
+  /* Added performance optimizations for animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* 3D Studio Animation Keyframes */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotateX(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotateX(5deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(95, 179, 212, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(95, 179, 212, 0.6), 0 0 60px rgba(95, 179, 212, 0.3);
+    }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(50px) rotateX(-10deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotateX(0deg);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px) rotateY(10deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) rotateY(0deg);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px) rotateY(-10deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) rotateY(0deg);
+    }
+  }
+
+  @keyframes rotate-3d {
+    from {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(15deg);
+    }
+  }
+
+  @keyframes scale-bounce {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* 3D Studio Utility Classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+  }
+
+  .animate-rotate-3d {
+    animation: rotate-3d 20s linear infinite;
+  }
+
+  .animate-scale-bounce {
+    animation: scale-bounce 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* 3D Transform Utilities */
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .perspective-2000 {
+    perspective: 2000px;
+  }
+
+  /* Glass Morphism Effects */
+  .glass-card {
+    background: rgba(95, 179, 212, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(95, 179, 212, 0.2);
+  }
+
+  .glass-card-dark {
+    background: rgba(25, 25, 112, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(95, 179, 212, 0.15);
+  }
+
+  /* Gradient Overlays */
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(95, 179, 212, 0.1), rgba(25, 25, 112, 0.1));
+  }
+
+  .gradient-border {
+    background: linear-gradient(135deg, #5fb3d4, #191970);
+    padding: 2px;
+    border-radius: inherit;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    /* Increased duration from 0.3s to 0.6s and changed to ease-in-out for more natural motion */
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(95, 179, 212, 0.4);
+  }
+
+  /* Stagger Animation Delays */
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
+  .stagger-6 {
+    animation-delay: 0.6s;
+  }
+
+  /* Sharper spacing utilities for better visual hierarchy */
+  .section-spacing {
+    @apply py-20 lg:py-32;
+  }
+
+  .content-spacing {
+    @apply space-y-8 lg:space-y-12;
+  }
+
+  .card-spacing {
+    @apply p-8 lg:p-10;
+  }
+
+  .text-spacing {
+    @apply space-y-4 lg:space-y-6;
+  }
+
+  /* Adding cursor pointer for all buttons */
+  button,
+  [role="button"],
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}
