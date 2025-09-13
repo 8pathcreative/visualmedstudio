@@ -46,8 +46,8 @@ export function Footer() {
             <h3 className="font-sans font-bold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>hello@vismedstudio.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>San Francisco, CA</li>
+              <li>(402) 926-4567</li>
+              <li>Omaha, NE</li>
             </ul>
           </div>
         </div>
