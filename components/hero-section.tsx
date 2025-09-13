@@ -49,7 +49,7 @@ export function HeroSection() {
               <div className="absolute -bottom-12 -right-12 w-20 h-20 bg-secondary/20 rounded-full animate-float stagger-3 blur-sm"></div>
               <div className="absolute top-1/2 -left-6 w-16 h-16 bg-primary/20 rounded-full animate-float stagger-5 blur-sm"></div>
 
-              <div className="glass-card rounded-3xl p-10 shadow-2xl hover-lift transform-3d animate-scale-bounce">
+              <div className="glass-card rounded-3xl p-10 shadow-2xl hover-lift transform-3d animate-pulse-glow">
                 <div className="relative overflow-hidden rounded-xl">
                                     <Image
                     src="/3d-heart-anatomy.png"
