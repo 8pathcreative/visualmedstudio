@@ -1,4 +1,5 @@
-// ...existing code...
+"use client"
+
 import { Suspense, useRef, useState } from "react"
 import * as THREE from "three"
 import { Canvas, useFrame } from "@react-three/fiber"
