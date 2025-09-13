@@ -3,7 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Cpu, Palette, Code, Cloud, Monitor, Zap, Shield, Globe, Layers, Settings } from "lucide-react"
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
 
 const technologyCategories = {
   "3d-modeling": {
@@ -225,11 +226,14 @@ export default function TechnologyPage() {
                       >
                         <CardContent className="p-6">
                           <div className="flex items-start gap-4">
-                            <img
-                              src={tech.logo || "/placeholder.svg"}
-                              alt={`${tech.name} logo`}
-                              className="w-12 h-12 rounded-lg object-contain bg-white p-2"
-                            />
+                            <div className="w-12 h-12 rounded-lg object-contain bg-white p-2 relative">
+                              <Image
+                                src={tech.logo || "/placeholder.svg"}
+                                alt={`${tech.name} logo`}
+                                layout="fill"
+                                objectFit="contain"
+                              />
+                            </div>
                             <div className="flex-1">
                               <h3 className="text-xl font-bold text-foreground mb-2">{tech.name}</h3>
                               <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{tech.description}</p>

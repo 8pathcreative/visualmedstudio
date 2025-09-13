@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Mail, Linkedin, Award, GraduationCap } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const teamMembers = [
   {
@@ -114,11 +115,13 @@ export default function TeamPage() {
               >
                 <CardContent className="p-0">
                   {/* Profile Image */}
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img
+                  <div className="relative overflow-hidden rounded-t-lg h-80">
+                    <Image
                       src={member.image || "/placeholder.svg"}
                       alt={`${member.name} - ${member.title}`}
-                      className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>

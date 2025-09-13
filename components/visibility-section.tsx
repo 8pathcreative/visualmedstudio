@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image";
 
 export function VisibilitySection() {
   return (
@@ -19,9 +20,11 @@ export function VisibilitySection() {
           <div className="relative">
             <Card className="bg-card border-border">
               <CardContent className="p-8">
-                <img
+                <Image
                   src="/medical-dashboard.png"
                   alt="Medical Visualization Dashboard"
+                  width={800}
+                  height={600}
                   className="w-full h-auto rounded-lg"
                 />
               </CardContent>

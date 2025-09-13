@@ -1,8 +1,16 @@
+import Image from "next/image";;
+
 export function TestimonialSection() {
   return (
     <section className="w-full px-4 py-20 relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/medical-background-pattern.jpg" alt="" className="w-full h-full object-cover" />
+                <Image
+          src="/medical-background-pattern.jpg"
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          className="opacity-20"
+        />
         <div className="absolute inset-0 bg-primary/90"></div>
       </div>
 

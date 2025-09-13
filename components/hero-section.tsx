@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -50,9 +51,11 @@ export function HeroSection() {
 
               <div className="glass-card rounded-3xl p-10 shadow-2xl hover-lift transform-3d animate-scale-bounce">
                 <div className="relative overflow-hidden rounded-xl">
-                  <img
+                                    <Image
                     src="/3d-heart-anatomy.png"
                     alt="3D Medical Heart Visualization"
+                    width={500}
+                    height={500}
                     className="w-full h-auto rounded-xl animate-float"
                   />
                   <div className="absolute top-6 right-6 glass-card bg-accent/95 text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold animate-pulse-glow hover-lift">

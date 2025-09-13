@@ -3,7 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Award, Trophy, Star, Medal, Briefcase as Certificate, Users, ExternalLink } from "lucide-react"
-import Link from "next/link"
+import Link from "next/link";
+import Image from "next/image";
 
 const awards = [
   {
@@ -276,11 +277,12 @@ export default function AwardsPage() {
                   >
                     <CardContent className="p-8">
                       <div className="flex items-center gap-8">
-                        <div className="w-24 h-24 rounded-lg bg-white p-4 flex items-center justify-center flex-shrink-0">
-                          <img
+                        <div className="w-24 h-24 rounded-lg bg-white p-4 flex items-center justify-center flex-shrink-0 relative">
+                          <Image
                             src={partnership.logo || "/placeholder.svg"}
                             alt={`${partnership.title} logo`}
-                            className="w-full h-full object-contain"
+                            layout="fill"
+                            objectFit="contain"
                           />
                         </div>
                         <div className="flex-1">

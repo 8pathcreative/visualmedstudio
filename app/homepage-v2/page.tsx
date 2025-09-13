@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ArrowRight, Play, Star, Users, Award, Zap, Mail, Phone, MapPin, Loader2 } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image";
 
 export default function HomepageV2() {
   const [contactForm, setContactForm] = useState({
@@ -103,11 +104,13 @@ export default function HomepageV2() {
               <div className="relative aspect-[4/3] max-w-2xl mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-3xl blur-3xl"></div>
                 <Card className="relative glass-card p-8 rounded-3xl hover-lift">
-                  <CardContent className="p-0">
-                    <img
+                  <CardContent className="p-0 relative aspect-[4/3]">
+                    <Image
                       src="/medical-dashboard.png"
                       alt="Medical Dashboard Interface"
-                      className="w-full h-full object-cover rounded-2xl"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-2xl"
                     />
                     <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold animate-pulse-glow">
                       Live Demo

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Calendar, Building, Users, ExternalLink, Play } from "lucide-react"
+import Image from "next/image";
 
 export default function ProjectsPage() {
   const projects = [
@@ -120,10 +121,11 @@ export default function ProjectsPage() {
                 <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-cols-2" : ""}`}>
                   {/* Project Image */}
                   <div className="relative aspect-[4/3] lg:aspect-auto">
-                    <img
+                    <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      layout="fill"
+                      objectFit="cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     <div className="absolute top-4 left-4">
