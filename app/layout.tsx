@@ -66,18 +66,23 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
+        {/* Critical meta tags first - affect initial rendering */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="format-detection" content="telephone=no" />
+        
+        {/* Preconnect to critical resources - establish connections early */}
         <link rel="preconnect" href="https://rsms.me" />
+        
+        {/* Critical stylesheets - fonts and critical CSS */}
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        
+        {/* Non-critical resources - icons and manifest */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#1e40af" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="format-detection" content="telephone=no" />
       </head>
       <body>
         <StructuredData />
