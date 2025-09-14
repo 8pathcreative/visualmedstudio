@@ -19,33 +19,42 @@ import {
 
 // Simple 3D Heart Model Component
 function HeartModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef: React.Ref<THREE.Group> }) {
-  const { scene } = useGLTF("/3d-heart-anatomy.glb")
-  useFrame(() => {
-    if (isAnimating && modelRef && "current" in modelRef && modelRef.current) {
-      modelRef.current.rotation.y += 0.01
-    }
-  })
-  return <primitive ref={modelRef} object={scene} scale={2.5} />
+  return (
+    <Html center>
+      <div className="text-white text-center">
+        <div className="text-6xl mb-4 animate-pulse">❤️</div>
+        <div className="text-xl font-semibold mb-2">Interactive Heart Anatomy</div>
+        <div className="text-sm opacity-75">3D model coming soon</div>
+        <div className="text-xs opacity-50 mt-2">Rotate, zoom, and explore</div>
+      </div>
+    </Html>
+  )
 }
 
 function BrainModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef: React.Ref<THREE.Group> }) {
-  const { scene } = useGLTF("/brain-scan.glb")
-  useFrame(() => {
-    if (isAnimating && modelRef && "current" in modelRef && modelRef.current) {
-      modelRef.current.rotation.y += 0.01
-    }
-  })
-  return <primitive ref={modelRef} object={scene} scale={1.5} />
+  return (
+    <Html center>
+      <div className="text-white text-center">
+        <div className="text-6xl mb-4 animate-pulse">🧠</div>
+        <div className="text-xl font-semibold mb-2">Brain Cross-Section Explorer</div>
+        <div className="text-sm opacity-75">3D model coming soon</div>
+        <div className="text-xs opacity-50 mt-2">Explore internal structures</div>
+      </div>
+    </Html>
+  )
 }
 
 function BoneModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef: React.Ref<THREE.Group> }) {
-  const { scene } = useGLTF("/bone-structure.glb")
-  useFrame(() => {
-    if (isAnimating && modelRef && "current" in modelRef && modelRef.current) {
-      modelRef.current.rotation.y += 0.01
-    }
-  })
-  return <primitive ref={modelRef} object={scene} scale={3} />
+  return (
+    <Html center>
+      <div className="text-white text-center">
+        <div className="text-6xl mb-4 animate-pulse">🦴</div>
+        <div className="text-xl font-semibold mb-2">Bone Structure Analysis</div>
+        <div className="text-sm opacity-75">3D model coming soon</div>
+        <div className="text-xs opacity-50 mt-2">Interactive bone composition</div>
+      </div>
+    </Html>
+  )
 }
 
 function DemoControls({ isAnimating, onToggleAnimation, onReset, onFullscreen }: { isAnimating: boolean; onToggleAnimation: () => void; onReset: () => void; onFullscreen: () => void }) {

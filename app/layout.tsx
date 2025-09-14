@@ -1,16 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800", "900"],
-  preload: true,
-  fallback: ["system-ui", "arial"],
-})
 
 export const metadata: Metadata = {
   title: "Vismed Studio - Bringing Medical Visualization to Life",
@@ -54,10 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`}>
+    <html lang="en" className="antialiased">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://rsms.me" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link rel="dns-prefetch" href="https://formspree.io" />
       </head>
       <body>{children}</body>
