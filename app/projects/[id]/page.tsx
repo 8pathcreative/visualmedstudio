@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, ExternalLink, Calendar, Users, Target, Lightbulb } from "lucide-react"
 
 const projectData = {
-  "3d-pelvic-floor": {
+  "1": {
     title: "3D Pelvic Floor Visualization",
     subtitle: "Interactive Anatomical Model for Medical Education",
     description:
@@ -38,7 +38,7 @@ const projectData = {
     ],
     gallery: ["/3d-pelvic-floor-muscles.png", "/pelvic-floor-pathology.png", "/interactive-medical-education.png"],
   },
-  "medical-database": {
+  "2": {
     title: "Medical Visualization Database",
     subtitle: "Comprehensive Medical Illustration Repository",
     description:
@@ -69,7 +69,7 @@ const projectData = {
     ],
     gallery: ["/medical-database-search.png", "/medical-illustration-dashboard.png", "/placeholder-nfvua.png"],
   },
-  "bpv-assessment": {
+  "3": {
     title: "BPV Assessment Module",
     subtitle: "Interactive Diagnostic Tool for Vertigo Assessment",
     description:
@@ -103,6 +103,99 @@ const projectData = {
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
     ],
+  },
+  "4": {
+    title: "Neurosurgery Planning Platform",
+    subtitle: "Interactive Brain Model for Surgical Planning",
+    description:
+      "Cutting-edge platform that converts MRI and CT scans into interactive 3D brain models for surgical planning. Enables surgeons to practice procedures and identify optimal surgical approaches.",
+    image: "/3d-heart-anatomy.png",
+    category: "Surgical Planning",
+    technologies: ["Medical Imaging", "3D Reconstruction", "WebGL", "DICOM"],
+    duration: "10 months",
+    team: "4 developers, 2 neurosurgeons",
+    client: "Cleveland Clinic",
+    challenge:
+      "Neurosurgeons needed a way to visualize complex brain structures in 3D before surgery to plan optimal approaches and minimize risk.",
+    solution:
+      "Developed an interactive 3D brain visualization platform that converts medical scans into detailed 3D models with surgical planning tools and risk assessment features.",
+    results: [
+      "25% improvement in surgical outcomes",
+      "30% reduction in operation time",
+      "Used by 50+ neurosurgeons",
+      "Featured in Neurosurgery Journal",
+    ],
+    features: [
+      "3D brain model reconstruction",
+      "Surgical approach planning",
+      "Risk assessment tools",
+      "Real-time collaboration",
+      "DICOM integration",
+      "VR compatibility",
+    ],
+    gallery: ["/3d-heart-anatomy.png", "/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+  },
+  "5": {
+    title: "Pharmaceutical Mechanism Visualizer",
+    subtitle: "Interactive Molecular Visualization Platform",
+    description:
+      "Interactive molecular visualization platform showing how drugs interact with cellular structures. Used for both medical education and pharmaceutical research presentations.",
+    image: "/medical-dashboard.png",
+    category: "Molecular Visualization",
+    technologies: ["Molecular Modeling", "WebGL", "Scientific Visualization"],
+    duration: "4 months",
+    team: "3 developers, 2 pharmacologists",
+    client: "Pfizer Research Division",
+    challenge:
+      "Pharmaceutical researchers needed a way to visualize and explain complex drug mechanisms to both scientific and non-scientific audiences.",
+    solution:
+      "Created an interactive molecular visualization platform that shows drug interactions at the cellular level with educational features and presentation tools.",
+    results: [
+      "Enhanced research presentations",
+      "Improved drug mechanism understanding",
+      "Used in 20+ research papers",
+      "Adopted by 5 pharmaceutical companies",
+    ],
+    features: [
+      "3D molecular visualization",
+      "Interactive drug binding",
+      "Educational animations",
+      "Presentation mode",
+      "Export capabilities",
+      "Multi-language support",
+    ],
+    gallery: ["/medical-dashboard.png", "/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+  },
+  "6": {
+    title: "Orthopedic Implant Configurator",
+    subtitle: "3D Implant Customization Platform",
+    description:
+      "3D configurator allowing surgeons to visualize and customize orthopedic implants in real-time. Includes bone density analysis and implant fit optimization algorithms.",
+    image: "/3d-heart-anatomy.png",
+    category: "Medical Devices",
+    technologies: ["3D Modeling", "CAD Integration", "Medical Simulation"],
+    duration: "7 months",
+    team: "4 developers, 3 orthopedic surgeons",
+    client: "Zimmer Biomet",
+    challenge:
+      "Orthopedic surgeons needed a way to customize implants for individual patients and visualize how they would fit before surgery.",
+    solution:
+      "Developed a 3D configurator that allows real-time customization of orthopedic implants with bone analysis and fit optimization algorithms.",
+    results: [
+      "90% surgeon adoption rate",
+      "20% improvement in implant fit accuracy",
+      "Reduced revision surgeries by 15%",
+      "Used in 1000+ procedures",
+    ],
+    features: [
+      "3D implant visualization",
+      "Real-time customization",
+      "Bone density analysis",
+      "Fit optimization",
+      "CAD integration",
+      "Surgical planning tools",
+    ],
+    gallery: ["/3d-heart-anatomy.png", "/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
   },
 }
 
