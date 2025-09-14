@@ -98,6 +98,22 @@ const config = {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        "fade-in-left": {
+          from: { opacity: "0", transform: "translateX(-20px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "fade-in-right": {
+          from: { opacity: "0", transform: "translateX(20px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        bounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +126,10 @@ const config = {
         "rotate-3d": "rotate-3d 20s linear infinite",
         "scale-bounce": "scale-bounce 2s ease-in-out infinite",
         "shimmer": "shimmer 2s infinite",
+        "fade-in-left": "fade-in-left 1s ease-in-out both",
+        "fade-in-right": "fade-in-right 1s ease-in-out both",
+        bounce: "bounce 1s infinite",
+        pulse: "pulse 2s infinite",
       },
     },
   },
