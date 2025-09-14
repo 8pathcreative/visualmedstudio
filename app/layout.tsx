@@ -1,16 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
+import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Vismed Studio - Bringing Medical Visualization to Life",
+  title: {
+    default: "VisualMed Studio - Medical Visualization & 3D Healthcare Solutions",
+    template: "%s | VisualMed Studio"
+  },
   description:
-    "We create cutting-edge 3D medical illustrations and full-stack applications that transform complex medical concepts into interactive, educational experiences.",
-  generator: "v0.app",
-  keywords: "medical visualization, 3D anatomy, medical education, healthcare applications, interactive learning",
-  authors: [{ name: "Vismed Studio" }],
-  creator: "Vismed Studio",
-  publisher: "Vismed Studio",
+    "Leading medical visualization studio creating interactive 3D anatomy models, surgical training simulators, and healthcare applications for medical education and patient care.",
+  authors: [{ name: "VisualMed Studio", url: "https://visualmedstudio.vercel.app" }],
+  creator: "VisualMed Studio",
+  publisher: "VisualMed Studio",
+  metadataBase: new URL("https://visualmedstudio.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
@@ -25,17 +31,31 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://vismedstudio.com",
-    title: "Vismed Studio - Medical Visualization Experts",
+    url: "https://visualmedstudio.vercel.app",
+    title: "VisualMed Studio - Medical Visualization & 3D Healthcare Solutions",
     description:
-      "Transform complex medical concepts into interactive, educational experiences with our cutting-edge 3D visualizations.",
-    siteName: "Vismed Studio",
+      "Leading medical visualization studio creating interactive 3D anatomy models, surgical training simulators, and healthcare applications for medical education and patient care.",
+    siteName: "VisualMed Studio",
+    images: [
+      {
+        url: "/medical-dashboard.png",
+        width: 1200,
+        height: 630,
+        alt: "VisualMed Studio - Medical Visualization Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vismed Studio - Medical Visualization Experts",
-    description: "Transform complex medical concepts into interactive, educational experiences.",
+    title: "VisualMed Studio - Medical Visualization & 3D Healthcare Solutions",
+    description: "Leading medical visualization studio creating interactive 3D anatomy models, surgical training simulators, and healthcare applications.",
+    images: ["/medical-dashboard.png"],
+    creator: "@visualmedstudio",
   },
+  verification: {
+    google: "your-google-verification-code", // Add your Google Search Console verification code
+  },
+  category: "Healthcare Technology",
 }
 
 export default function RootLayout({
@@ -48,9 +68,21 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://rsms.me" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <link rel="dns-prefetch" href="https://formspree.io" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="format-detection" content="telephone=no" />
       </head>
-      <body>{children}</body>
+      <body>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   )
 }
