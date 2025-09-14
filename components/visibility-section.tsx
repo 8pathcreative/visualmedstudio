@@ -6,7 +6,7 @@ export function VisibilitySection() {
     <section className="w-full px-4 py-20 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="animate-fade-in-left stagger-1">
             <h2 className="text-3xl lg:text-4xl font-sans font-black text-foreground mb-6">
               Complete Medical <span className="text-accent">Visualization</span> Solutions
             </h2>
@@ -17,7 +17,7 @@ export function VisibilitySection() {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative animate-fade-in-right stagger-2">
             <Card className="bg-card border-border">
               <CardContent className="p-8">
                 <Image
@@ -30,7 +30,7 @@ export function VisibilitySection() {
               </CardContent>
             </Card>
 
-            <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold shadow-lg animate-float stagger-4">
               Real-time Analytics
             </div>
           </div>
