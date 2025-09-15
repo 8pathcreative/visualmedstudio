@@ -1,0 +1,32 @@
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marqueeWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.marqueeContent {
+  display: flex;
+  flex-shrink: 0;
+  animation: marquee-ltr 30s linear infinite;
+  width: fit-content;
+}
+
+.logoSet {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.marqueeWrapper:hover .marqueeContent {
+  animation-play-state: paused;
+}

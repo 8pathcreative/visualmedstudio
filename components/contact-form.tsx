@@ -146,11 +146,11 @@ export function ContactForm() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-2">
-                  123 Medical Innovation Blvd
+                  2223 Dodge Street
                   <br />
-                  Suite 456
+                  Suite 17
                   <br />
-                  Boston, MA 02101
+                  Omaha, NE 68105
                 </p>
               </CardContent>
             </Card>
@@ -162,7 +162,7 @@ export function ContactForm() {
                 <Badge variant="secondary">Interactive Applications</Badge>
                 <Badge variant="secondary">Educational Tools</Badge>
                 <Badge variant="secondary">VR/AR Experiences</Badge>
-                <Badge variant="secondary">Custom Development</Badge>
+                <Badge variant="secondary">Full-Stack Web & App Development</Badge>
               </div>
             </div>
           </div>

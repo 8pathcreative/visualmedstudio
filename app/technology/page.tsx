@@ -141,7 +141,7 @@ export default function TechnologyPage() {
       <Header />
       {/* Hero Section */}
       <section className="bg-primary/10 py-20 text-center">
-        <div className="container">
+        <div className="cmax-w-7xl mx-auto">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Our Technology Stack
           </h1>
@@ -155,7 +155,7 @@ export default function TechnologyPage() {
 
       {/* Technology Tabs Section */}
       <main className="py-16 sm:py-24">
-        <div className="container">
+        <div className="max-w-7xl mx-auto">
           <Tabs defaultValue="3d-modeling" className="w-full">
             <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
               {Object.entries(technologyCategories).map(([key, category]) => (
@@ -210,7 +210,7 @@ export default function TechnologyPage() {
 
       {/* Core Principles Section */}
       <section className="py-24 bg-primary/5">
-        <div className="container">
+        <div className="cmax-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Our Core Principles
