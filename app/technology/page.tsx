@@ -210,7 +210,7 @@ export default function TechnologyPage() {
 
       {/* Core Principles Section */}
       <section className="py-24 bg-primary/5">
-        <div className="cmax-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Our Core Principles
