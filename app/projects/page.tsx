@@ -175,7 +175,7 @@ export default function ProjectsPage() {
           </p>
           <div className="mt-8">
             <Button asChild size="lg">
-              <Link href="/contact">Get a Free Consultation</Link>
+              <Link href="/#contact">Get a Free Consultation</Link>
             </Button>
           </div>
         </div>
