@@ -44,7 +44,7 @@ export function Header() {
             asChild
             className="hidden md:flex bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 hover-lift hover-glow"
           >
-            <Link href="/contact">
+            <Link href="/#contact">
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
@@ -78,7 +78,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="w-full mt-4">
-              <Link href="/contact">
+              <Link href="/#contact">
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
