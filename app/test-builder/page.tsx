@@ -19,7 +19,7 @@ export default function TestBuilder() {
     {/* Remove the x-data attribute from the section tag */}
 <section className="overflow-hidden">
   <div className="bg-white">
-    <div className="container px-4 mx-auto">
+    <div className="max-w-7xl px-4 mx-auto">
       <div className="flex items-center justify-between py-5">
         <div className="w-auto">
           <div className="flex flex-wrap items-center">
@@ -124,7 +124,7 @@ export default function TestBuilder() {
     </div>
     
     <div className="pt-16 lg:pt-32 pb-24 lg:pb-52 bg-gray-50 overflow-hidden">
-      <div className="container px-4 mx-auto">
+      <div className="max-w-7xl px-4 mx-auto">
         <div className="flex flex-wrap -m-8">
           <div className="w-full md:w-1/2 p-8">
             <div className="md:max-w-lg">
@@ -201,7 +201,7 @@ export default function TestBuilder() {
 </section>
      {/* MARQUEE LOGO SECTION - Tailwind Only */}
 <section className="py-20 bg-white">
-  <div className="container mx-auto px-4">
+  <div className="max-w-7xl mx-auto px-4">
     <h2 className="text-xl font-semibold text-center text-gray-800">
       Trusted by 3000+ great companies
     </h2>

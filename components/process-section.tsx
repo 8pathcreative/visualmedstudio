@@ -62,7 +62,7 @@ const processSteps = [
 export function ProcessSection() {
   return (
     <section className="py-24 bg-gradient-to-br from-background via-secondary/5 to-accent/10">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Process</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

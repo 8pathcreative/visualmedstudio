@@ -12,7 +12,7 @@ export default function DemosPage() {
       <Header />
       {/* Hero Section */}
       <section className="bg-primary/10 py-20 text-center">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
             Interactive 3D Demos
           </h1>
@@ -25,7 +25,7 @@ export default function DemosPage() {
       </section>
       {/* Demo Viewer Section */}
       <main className="py-16 sm:py-24">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4">
           <Demo3DViewer />
         </div>
       </main>

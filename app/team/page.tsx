@@ -98,7 +98,7 @@ export default function TeamPage() {
 			<Header />
 			{/* Hero Section */}
 			<section className="bg-primary/10 py-20 text-center">
-				<div className="container">
+				<div className="max-w-7xl mx-auto px-4">
 					<h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
 						Meet Our Experts
 					</h1>
@@ -111,7 +111,7 @@ export default function TeamPage() {
 
 			{/* Team Grid */}
 			<main className="py-16 sm:py-24">
-				<div className="container">
+				<div className="max-w-7xl mx-auto px-4">
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 						{teamMembers.map((member) => (
 							<Card
@@ -164,7 +164,7 @@ export default function TeamPage() {
 
 			{/* Join Us Section */}
 			<section className="py-24 bg-primary/5">
-				<div className="container text-center">
+				<div className="cmax-w-7xl mx-auto text-center">
 					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
 						Join Our Mission
 					</h2>

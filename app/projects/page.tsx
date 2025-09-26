@@ -95,7 +95,7 @@ export default function ProjectsPage() {
 
       {/* Hero Section */}
       <section className="bg-primary/10 py-20 text-center">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Our Work
           </h1>
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
 
       {/* Projects Grid */}
       <main className="py-16 sm:py-24">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <Card
@@ -165,7 +165,7 @@ export default function ProjectsPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-primary/5">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Have a Project in Mind?
           </h2>

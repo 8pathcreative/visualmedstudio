@@ -64,7 +64,7 @@ export default function ProjectPageV2() {
     <main className="min-h-screen bg-background">
       {/* Header Section */}
       <section className="py-12 bg-card/50 border-b">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
             <Link href="/projects" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
               <ArrowLeft className="w-4 h-4" />
@@ -85,7 +85,7 @@ export default function ProjectPageV2() {
 
       {/* Main Content */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-12">
@@ -247,7 +247,7 @@ export default function ProjectPageV2() {
 
       {/* CTA Section */}
       <section className="py-20 bg-card/50">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-foreground mb-4">Have a similar project in mind?</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let's collaborate to bring your medical visualization ideas to life. Contact us today for a free

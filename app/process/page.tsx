@@ -124,7 +124,7 @@ export default function ProcessPage() {
 
       {/* Process Steps Section */}
       <main className="py-16 sm:py-24">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="space-y-16">
             {processSteps.map((step, index) => (
               <div

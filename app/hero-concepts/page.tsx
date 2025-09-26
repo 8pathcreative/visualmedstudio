@@ -11,7 +11,7 @@ export default function HeroConceptsPage() {
 
       {/* Page Header */}
       <section className="section-spacing bg-gradient-to-br from-background via-muted/30 to-secondary/10">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Hero Section Concepts
@@ -25,7 +25,7 @@ export default function HeroConceptsPage() {
 
       {/* Concept 1: Minimal & Clean */}
       <section className="section-spacing border-b">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Concept 1: Minimal & Clean</h2>
             <p className="text-muted-foreground">Simple, focused design with plenty of whitespace</p>
@@ -53,7 +53,7 @@ export default function HeroConceptsPage() {
 
       {/* Concept 2: Split Layout with Visual */}
       <section className="section-spacing border-b">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Concept 2: Split Layout</h2>
             <p className="text-muted-foreground">Content and visual split for balanced presentation</p>
@@ -98,7 +98,7 @@ export default function HeroConceptsPage() {
 
       {/* Concept 3: Centered with Stats */}
       <section className="section-spacing border-b">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Concept 3: Centered with Stats</h2>
             <p className="text-muted-foreground">Central focus with supporting statistics</p>
@@ -153,7 +153,7 @@ export default function HeroConceptsPage() {
 
       {/* Concept 4: Card-Based Layout */}
       <section className="section-spacing border-b">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Concept 4: Card-Based Layout</h2>
             <p className="text-muted-foreground">Modular design with distinct content cards</p>
@@ -220,7 +220,7 @@ export default function HeroConceptsPage() {
 
       {/* Concept 5: Full-Width Background */}
       <section className="section-spacing">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">Concept 5: Full-Width Background</h2>
             <p className="text-muted-foreground">Immersive design with background imagery</p>

@@ -74,7 +74,7 @@ export function ContactForm() {
   if (isSubmitted) {
     return (
       <section className="py-24 bg-gradient-to-br from-background via-secondary/5 to-accent/10">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center animate-slide-in-up">
             <Card className="glass-card p-8">
               <div className="flex flex-col items-center space-y-6">
@@ -99,7 +99,7 @@ export function ContactForm() {
 
   return (
     <section className="py-24 bg-gradient-to-br from-background via-secondary/5 to-accent/10">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Start Your Project</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

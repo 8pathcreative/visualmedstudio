@@ -209,7 +209,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/5 to-accent/10">
       {/* Header */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         <Link href="/#portfolio">
           <Button variant="outline" className="mb-8 hover-lift bg-transparent">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -219,7 +219,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       </div>
 
       {/* Hero Section */}
-      <div className="container mx-auto px-4 pb-16">
+      <div className="max-w-7xl mx-auto px-4 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             <Badge className="mb-4">{project.category}</Badge>
@@ -262,7 +262,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       </div>
 
       {/* Case Study Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Challenge */}
           <Card className="glass-card animate-slide-in-up">

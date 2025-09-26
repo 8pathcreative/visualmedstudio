@@ -131,7 +131,7 @@ export default function AwardsPage() {
       <Header />
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-to-br from-card to-muted">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
               Awards & Certifications
@@ -160,7 +160,7 @@ export default function AwardsPage() {
 
       {/* Awards and Certifications Tabs */}
       <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <Tabs defaultValue="awards" className="max-w-6xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 mb-12">
               <TabsTrigger value="awards" className="flex items-center gap-2 p-4">
@@ -316,7 +316,7 @@ export default function AwardsPage() {
 
       {/* Trust Indicators */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Trusted by Healthcare Leaders
@@ -369,7 +369,7 @@ export default function AwardsPage() {
 
       {/* Call to Action */}
       <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Experience Award-Winning Quality
