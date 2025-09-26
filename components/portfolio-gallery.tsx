@@ -180,7 +180,7 @@ export function PortfolioGallery() {
 
         <div className="text-center mt-16">
           <Button size="lg" className="animate-pulse-glow">
-            View All Projects
+            <Link href="/projects">View all projects</Link>
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
