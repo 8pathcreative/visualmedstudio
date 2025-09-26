@@ -14,6 +14,7 @@ export function Header() {
     { href: "/#portfolio", label: "Gallery" },
     { href: "/#resources", label: "Resources" },
     { href: "/#contact", label: "Contact" },
+    { href: "/demos", label: "Demos" },
   ]
 
   return (
