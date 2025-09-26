@@ -13,7 +13,7 @@ const teamMembers = [
 		name: "Neil Humphrey",
 		title: "UI/UX Designer, Co-Founder",
 		image: "/professional-headshot-of-asian-woman-doctor-in-lab.jpg",
-		bio: "Dr. Chen brings over 12 years of experience in medical imaging and 3D visualization. She specializes in creating accurate anatomical models for surgical planning and medical education.",
+		bio: "Neil brings over 12 years of experience in medical imaging and 3D visualization. She specializes in creating accurate anatomical models for surgical planning and medical education.",
 		credentials: [
 			"PhD in Biomedical Engineering",
 			"Certified Medical Illustrator",
