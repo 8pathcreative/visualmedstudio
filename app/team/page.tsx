@@ -10,8 +10,8 @@ import { Footer } from "@/components/footer"
 const teamMembers = [
 	{
 		id: 1,
-		name: "Dr. Sarah Chen",
-		title: "Lead Medical Visualization Specialist",
+		name: "Neil Humphrey",
+		title: "UI/UX Designer, Co-Founder",
 		image: "/professional-headshot-of-asian-woman-doctor-in-lab.jpg",
 		bio: "Dr. Chen brings over 12 years of experience in medical imaging and 3D visualization. She specializes in creating accurate anatomical models for surgical planning and medical education.",
 		credentials: [
@@ -112,7 +112,7 @@ export default function TeamPage() {
 			{/* Team Grid */}
 			<main className="py-16 sm:py-24">
 				<div className="max-w-7xl mx-auto px-4">
-					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 						{teamMembers.map((member) => (
 							<Card
 								key={member.id}
