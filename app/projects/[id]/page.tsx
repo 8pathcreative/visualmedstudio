@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, ExternalLink, Calendar, Users, Target, Lightbulb } from "lucide-react"
 
 const projectData = {
-  "1": {
+  "3d-pelvic-floor": {
     title: "3D Pelvic Floor Visualization",
     subtitle: "Interactive Anatomical Model for Medical Education",
     description:
@@ -38,7 +38,7 @@ const projectData = {
     ],
     gallery: ["/3d-pelvic-floor-muscles.png", "/pelvic-floor-pathology.png", "/interactive-medical-education.png"],
   },
-  "2": {
+  "medical-database": {
     title: "Medical Visualization Database",
     subtitle: "Comprehensive Medical Illustration Repository",
     description:
@@ -69,7 +69,7 @@ const projectData = {
     ],
     gallery: ["/medical-database-search.png", "/medical-illustration-dashboard.png", "/placeholder-nfvua.png"],
   },
-  "3": {
+  "bpv-assessment": {
     title: "BPV Assessment Module",
     subtitle: "Interactive Diagnostic Tool for Vertigo Assessment",
     description:
@@ -104,7 +104,7 @@ const projectData = {
       "/placeholder.svg?height=400&width=600",
     ],
   },
-  "4": {
+  "neurosurgery-planning": {
     title: "Neurosurgery Planning Platform",
     subtitle: "Interactive Brain Model for Surgical Planning",
     description:
@@ -135,7 +135,7 @@ const projectData = {
     ],
     gallery: ["/3d-heart-anatomy.png", "/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
   },
-  "5": {
+  "pharma-visualizer": {
     title: "Pharmaceutical Mechanism Visualizer",
     subtitle: "Interactive Molecular Visualization Platform",
     description:
@@ -166,7 +166,7 @@ const projectData = {
     ],
     gallery: ["/medical-dashboard.png", "/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
   },
-  "6": {
+  "orthopedic-implant": {
     title: "Orthopedic Implant Configurator",
     subtitle: "3D Implant Customization Platform",
     description:
