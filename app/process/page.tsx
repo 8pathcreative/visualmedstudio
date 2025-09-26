@@ -110,7 +110,7 @@ export default function ProcessPage() {
       <Header />
       {/* Hero Section */}
       <section className="bg-primary/10 py-20 text-center">
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Our Process
           </h1>
@@ -194,7 +194,7 @@ export default function ProcessPage() {
 
       {/* CTA Section */}
       <section className="py-24 bg-primary/5">
-        <div className="container text-center">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Ready to Start Your Project?
           </h2>
