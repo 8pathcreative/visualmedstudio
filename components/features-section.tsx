@@ -62,7 +62,7 @@ export function FeaturesSection() {
             return (
               <Card
                 key={index}
-                className={`glass-card border-border hover-lift hover-glow transition-all duration-700 transform-3d animate-slide-in-up stagger-${index + 3} group relative overflow-hidden`}
+                className={`glass-card border hover-lift hover-glow transition-all duration-700 transform-3d animate-slide-in-up stagger-${index + 3} group relative overflow-hidden`}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}

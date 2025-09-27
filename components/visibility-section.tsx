@@ -18,7 +18,7 @@ export function VisibilitySection() {
           </div>
 
           <div className="relative animate-fade-in-right stagger-2">
-            <Card className="bg-card border-border">
+            <Card className="bg-card border">
               <CardContent className="p-8">
                 <Image
                   src="/medical-dashboard.png"

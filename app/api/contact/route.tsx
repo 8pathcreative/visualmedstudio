@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     const { firstName, lastName, email, company, message, projectType } = body
 
     const emailContent = {
-      to: "neilkhumphrey@gmail.com",
+      to: "studiovismed@gmail.com",
       from: "contact@vismedstudio.com",
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
