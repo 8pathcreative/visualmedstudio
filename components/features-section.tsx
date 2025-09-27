@@ -48,7 +48,7 @@ export function FeaturesSection() {
             <span className="text-accent animate-shimmer bg-gradient-to-r from-accent via-secondary to-accent bg-clip-text">
               Virtual World
             </span>{" "}
-            in Medical Education
+            in Medical education
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-slide-in-up stagger-2">
             Explore our suite of tools designed to streamline medical visualization, enhance productivity, and drive
