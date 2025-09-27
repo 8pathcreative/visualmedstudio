@@ -22,7 +22,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg hover-glow">
-            <span className="text-primary-foreground font-black text-xl">V</span>
+            <span className="text-primary-foreground font-black text-xl">☤</span>
           </div>
           <span className="font-sans font-black text-2xl text-foreground">Vismed Studio</span>
         </Link>

@@ -11,7 +11,7 @@ export function HeroSection() {
             <div className="flex items-center justify-center lg:justify-start mb-8 animate-fade-in-left stagger-1">
               <div className="flex items-center space-x-3 glass-card px-6 py-3 rounded-full hover-glow">
                 <div className="w-7 h-7 bg-accent rounded-full flex items-center justify-center animate-pulse">
-                  <span className="text-accent-foreground text-xs font-bold">3D</span>
+                  <span className="text-accent-foreground text-xs font-bold">🏥</span>
                 </div>
                 <span className="text-sm font-medium text-muted-foreground">
                   Trusted by 200+ Healthcare Institutions
