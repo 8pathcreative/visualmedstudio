@@ -44,11 +44,11 @@ export function FeaturesSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-sans font-black text-foreground mb-6 animate-slide-in-up stagger-1">
-            Innovative tools to{" "}
+            Custom Applications, Websites, & 3D AR/VR for the {" "}
             <span className="text-accent animate-shimmer bg-gradient-to-r from-accent via-secondary to-accent bg-clip-text">
-              transform
+              Virtual World
             </span>{" "}
-            medical education
+            in Medical Education
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-slide-in-up stagger-2">
             Explore our suite of tools designed to streamline medical visualization, enhance productivity, and drive
