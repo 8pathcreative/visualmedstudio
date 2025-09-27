@@ -1,5 +1,6 @@
 "use client"
-
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
@@ -63,6 +64,7 @@ export default function ProjectPageV2() {
   return (
     <main className="min-h-screen bg-background">
       {/* Header Section */}
+      <Header />
       <section className="py-12 bg-card/50 border-b">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -260,6 +262,7 @@ export default function ProjectPageV2() {
           </Button>
         </div>
       </section>
+       <Footer />
     </main>
   )
 }
