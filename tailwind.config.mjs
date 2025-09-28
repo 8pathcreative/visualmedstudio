@@ -1,139 +1,102 @@
 /** @type {import('tailwindcss').Config} */
-const config = {
+export default {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
-  prefix: "",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  safelist: [
+    'animate-float',
+    'animate-pulse-glow',
+    'animate-slide-in-up',
+    'animate-slide-in-left', 
+    'animate-slide-in-right',
+    'animate-rotate-3d',
+    'animate-scale-bounce',
+    'animate-shimmer',
+    'animate-fade-in-left',
+    'animate-fade-in-right',
+    'animate-bounce',
+    'animate-pulse',
+    'glass-card',
+    'glass-card-dark',
+    'hover-lift',
+    'hover-glow',
+    'gradient-overlay',
+    'gradient-border',
+    'stagger-1',
+    'stagger-2',
+    'stagger-3',
+    'stagger-4',
+    'stagger-5',
+    'stagger-6',
+  ],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['var(--font-inter)', 'ui-serif', 'Georgia', 'serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+      },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))"
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          foreground: "hsl(var(--popover-foreground))"
         },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))"
         },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))"
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))"
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))"
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))"
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))"
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))"
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px) rotateX(0deg)" },
-          "50%": { transform: "translateY(-20px) rotateX(5deg)" },
-        },
-        "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(95, 179, 212, 0.3)" },
-          "50%": { boxShadow: "0 0 40px rgba(95, 179, 212, 0.6), 0 0 60px rgba(95, 179, 212, 0.3)" },
-        },
-        "slide-in-up": {
-          from: { opacity: "0", transform: "translateY(50px) rotateX(-10deg)" },
-          to: { opacity: "1", transform: "translateY(0) rotateX(0deg)" },
-        },
-        "slide-in-left": {
-          from: { opacity: "0", transform: "translateX(-50px) rotateY(10deg)" },
-          to: { opacity: "1", transform: "translateX(0) rotateY(0deg)" },
-        },
-        "slide-in-right": {
-          from: { opacity: "0", transform: "translateX(50px) rotateY(-10deg)" },
-          to: { opacity: "1", transform: "translateX(0) rotateY(0deg)" },
-        },
-        "rotate-3d": {
-          from: { transform: "rotateY(0deg) rotateX(0deg)" },
-          to: { transform: "rotateY(360deg) rotateX(15deg)" },
-        },
-        "scale-bounce": {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.05)" },
-        },
-        "shimmer": {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
-        "fade-in-left": {
-          from: { opacity: "0", transform: "translateX(-20px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
-        "fade-in-right": {
-          from: { opacity: "0", transform: "translateX(20px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
-        bounce: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        pulse: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.5" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "float": "float 6s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "slide-in-up": "slide-in-up 0.8s ease-out forwards",
-        "slide-in-left": "slide-in-left 0.8s ease-out forwards",
-        "slide-in-right": "slide-in-right 0.8s ease-out forwards",
-        "rotate-3d": "rotate-3d 20s linear infinite",
-        "scale-bounce": "scale-bounce 2s ease-in-out infinite",
-        "shimmer": "shimmer 2s infinite",
-        "fade-in-left": "fade-in-left 1s ease-in-out both",
-        "fade-in-right": "fade-in-right 1s ease-in-out both",
-        bounce: "bounce 1s infinite",
-        pulse: "pulse 2s infinite",
-      },
-    },
+        sm: "calc(var(--radius) - 4px)"
+      }
+    }
   },
   plugins: [require("tailwindcss-animate")],
 }
-
-export default config;

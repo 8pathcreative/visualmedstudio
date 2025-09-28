@@ -6,6 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { OptimizedImage } from "@/components/optimized-images"
 
 const teamMembers = [
 	{
@@ -113,20 +114,21 @@ export default function TeamPage() {
 			<main className="py-16 sm:py-24">
 				<div className="max-w-7xl mx-auto px-4">
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-						{teamMembers.map((member) => (
+						{teamMembers.map((member, index) => (
+
 							<Card
 								key={member.id}
-								className="overflow-hidden text-center transition-shadow duration-300 hover:shadow-xl"
-							>
-								<div className="relative h-56 w-full">
-									<Image
-										src={member.image}
-										alt={member.name}
-										layout="fill"
-										objectFit="cover"
-										className="grayscale transition-all duration-500 hover:grayscale-0"
-									/>
-								</div>
+className="group overflow-hidden text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+								<div className="relative h-64 w-full overflow-hidden">
+  <OptimizedImage
+    src={member.image}
+    alt={`Professional headshot of ${member.name}`}
+    width={400}
+    height={300}
+    priority={index < 2}
+    className="grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105 object-cover w-full h-full"
+  />
+</div>
 								<CardContent className="p-6">
 									<h3 className="text-xl font-bold text-foreground">
 										{member.name}
@@ -164,7 +166,7 @@ export default function TeamPage() {
 
 			{/* Join Us Section */}
 			<section className="py-24 bg-primary/5">
-				<div className="cmax-w-7xl mx-auto text-center">
+				<div className="max-w-7xl mx-auto text-center">
 					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
 						Join Our Mission
 					</h2>

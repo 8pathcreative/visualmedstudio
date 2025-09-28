@@ -1,7 +1,29 @@
+// app/layout.tsx
 import type React from "react"
 import type { Metadata } from "next"
+import localFont from 'next/font/local'
 import "./globals.css"
 import { StructuredData } from "@/components/structured-data"
+
+// Optimized font loading with preload and display swap
+const inter = localFont({
+  src: [
+    {
+      path: '../public/fonts/InterVariable.woff2',
+      weight: '100 900',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Inter-Regular.woff2', 
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-inter',
+  display: 'swap', // Critical: prevents render blocking
+  preload: true, // Preloads the font
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+})
 
 export const metadata: Metadata = {
   title: {
@@ -53,7 +75,7 @@ export const metadata: Metadata = {
     creator: "@visualmedstudio",
   },
   verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
+    google: "your-google-verification-code",
   },
   category: "Healthcare Technology",
 }
@@ -64,27 +86,30 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en" className={`${inter.variable} antialiased`}>
       <head>
-        {/* Critical meta tags first - affect initial rendering */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Critical meta tags first */}
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         <meta name="theme-color" content="#1e40af" />
         <meta name="format-detection" content="telephone=no" />
         
-        {/* Preconnect to critical resources - establish connections early */}
-        <link rel="preconnect" href="https://rsms.me" />
+        {/* Font optimization: Preload critical font resources */}
+        <link
+          rel="preload"
+          href="/fonts/InterVariable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         
-        {/* Critical stylesheets - fonts and critical CSS */}
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        
-        {/* Non-critical resources - icons and manifest */}
+        {/* Non-critical resources */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body>
+      <body className={inter.className}>
         <StructuredData />
         {children}
       </body>

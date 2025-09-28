@@ -6,7 +6,9 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "ANALYZE=true pnpm build",
+    "analyze:open": "ANALYZE=true pnpm build && npx serve out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -67,6 +69,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.5.4",
     "@tailwindcss/postcss": "^4.1.9",
     "@types/node": "^22",
     "@types/react": "^19",
