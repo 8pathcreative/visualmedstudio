@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, ExternalLink, Calendar, Users, Target, Lightbulb } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 
 const projectData = {
   "3d-pelvic-floor": {
