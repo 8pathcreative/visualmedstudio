@@ -199,12 +199,12 @@ const projectData = {
   },
 }
 
-export default async function ProjectPage({ 
-  params 
-}: { 
-  params: Promise<{ id: string }> 
+export default function ProjectPage({
+  params,
+}: {
+  params: { id: string }
 }) {
-  const { id } = await params
+  const { id } = params
   const project = projectData[id as keyof typeof projectData]
 
   if (!project) {
