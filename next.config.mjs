@@ -29,7 +29,7 @@ const nextConfig = {
       config.optimization.splitChunks = {
         chunks: 'all',
         minSize: 20000,
-        maxSize: 244000,
+        maxSize: 150000,
         cacheGroups: {
           framework: {
             chunks: 'all',
@@ -37,11 +37,20 @@ const nextConfig = {
             test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
             priority: 40,
             enforce: true,
+            maxSize: 150000,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 30,
+            maxSize: 150000,
           },
           commons: {
             name: 'commons',
             minChunks: 2,
             priority: 20,
+            maxSize: 100000,
           },
         },
       }
