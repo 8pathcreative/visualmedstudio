@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import Image from "next/image"
+import { OptimizedImage } from "@/components/optimized-images"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -199,8 +199,13 @@ const projectData = {
   },
 }
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = projectData[params.id as keyof typeof projectData]
+export default async function ProjectPage({ 
+  params 
+}: { 
+  params: Promise<{ id: string }> 
+}) {
+  const { id } = await params
+  const project = projectData[id as keyof typeof projectData]
 
   if (!project) {
     notFound()
@@ -249,7 +254,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
           <div className="animate-slide-in-right">
             <Card className="glass-card overflow-hidden hover-lift">
-              <Image
+              <OptimizedImage
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 width={1200}
@@ -319,7 +324,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {project.gallery.map((image, index) => (
                 <Card key={index} className="glass-card overflow-hidden hover-lift group">
-                  <Image
+                  <OptimizedImage
                     src={image || "/placeholder.svg"}
                     alt={`${project.title} gallery ${index + 1}`}
                     width={600}
