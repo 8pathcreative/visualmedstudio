@@ -22,7 +22,7 @@ export default function HomepageV2() {
   const [isContactLoading, setIsContactLoading] = useState(false)
   const [contactSubmitted, setContactSubmitted] = useState(false)
 
-  const handleContactInputChange = (e) => {
+const handleContactInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setContactForm((prevForm) => ({
       ...prevForm,
