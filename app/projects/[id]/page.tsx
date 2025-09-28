@@ -38,7 +38,6 @@ const projectData = {
     ],
     gallery: ["/3d-pelvic-floor-muscles.png", "/pelvic-floor-pathology.png", "/interactive-medical-education.png"],
   },
-  // ... other projects unchanged ...
   "orthopedic-implant": {
     title: "Orthopedic Implant Configurator",
     subtitle: "3D Implant Customization Platform",
@@ -72,8 +71,13 @@ const projectData = {
   },
 }
 
-// ✅ Explicit props type, no global conflicts
-export default function ProjectPage({ params }: { params: { id: string } }) {
+// ✅ Define a specific type for the page props to avoid global conflicts.
+type ProjectPageProps = {
+  params: { id: string };
+};
+
+// Use the new type for the component's props.
+export default function ProjectPage({ params }: ProjectPageProps) {
   const project = projectData[params.id as keyof typeof projectData]
 
   if (!project) notFound()
