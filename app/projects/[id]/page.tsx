@@ -199,17 +199,14 @@ const projectData = {
   },
 }
 
-export default function ProjectPage({
-  params,
-}: {
+type ProjectPageProps = {
   params: { id: string }
-}) {
-  const { id } = params
-  const project = projectData[id as keyof typeof projectData]
+}
 
-  if (!project) {
-    notFound()
-  }
+export default function ProjectPage({ params }: ProjectPageProps) {
+  const project = projectData[params.id as keyof typeof projectData]
+
+  if (!project) notFound()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/5 to-accent/10">
