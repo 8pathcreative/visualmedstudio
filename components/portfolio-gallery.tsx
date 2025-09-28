@@ -67,7 +67,7 @@ const portfolioProjects = [
 
 export function PortfolioGallery() {
   const [filter, setFilter] = useState("all")
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null)
+  // const [hoveredProject, setHoveredProject] = useState<string | null>(null)
 
   const categories = ["all", ...Array.from(new Set(portfolioProjects.map((p) => p.category)))]
   const filteredProjects = filter === "all" ? portfolioProjects : portfolioProjects.filter((p) => p.category === filter)

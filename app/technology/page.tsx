@@ -1,9 +1,9 @@
-import { Card, CardContent } from "@/components/ui/card"
+// import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Cpu, Palette, Code, Cloud, Monitor, Zap, Shield, Globe, Layers, Settings } from "lucide-react"
-import Link from "next/link";
+import { Palette, Code, Cloud, Monitor, Zap, Shield, Layers, } from "lucide-react"
+// import Link from "next/link";
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";

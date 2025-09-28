@@ -2,8 +2,8 @@
 
 import { Suspense, useRef, useState } from "react"
 import * as THREE from "three"
-import { Canvas, useFrame } from "@react-three/fiber"
-import { OrbitControls, useGLTF, Html } from "@react-three/drei"
+import { Canvas } from "@react-three/fiber"
+import { OrbitControls, Html } from "@react-three/drei"
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib"
 import { Button } from "@/components/ui/button"
 import {
