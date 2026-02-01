@@ -126,7 +126,7 @@ export default function ProcessPage() {
       <main className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="space-y-16">
-            {processSteps.map((step, index) => (
+            {processSteps.map((step) => (
               <div
                 key={step.id}
                 className="grid grid-cols-1 items-start gap-12 md:grid-cols-3"

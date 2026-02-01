@@ -15,6 +15,7 @@ import { Mail, Phone, MapPin, ArrowRight, CheckCircle, Loader2 } from "lucide-re
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -26,6 +27,7 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null)
     setIsLoading(true)
 
     try {
@@ -44,6 +46,8 @@ export function ContactForm() {
         }),
       })
 
+      const data = await response.json()
+
       if (response.ok) {
         setIsSubmitted(true)
         // Reset form
@@ -56,12 +60,13 @@ export function ContactForm() {
           projectType: "",
         })
       } else {
-        console.error("[v0] Form submission failed")
-        alert("Failed to send message. Please try again.")
+        setError(data.message || "Failed to send message. Please try again.")
+        console.error("[Contact Form] Form submission failed:", data)
       }
     } catch (error) {
-      console.error("[v0] Form submission error:", error)
-      alert("Failed to send message. Please try again.")
+      const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred"
+      setError(errorMessage)
+      console.error("[Contact Form] Form submission error:", error)
     } finally {
       setIsLoading(false)
     }
@@ -175,6 +180,12 @@ export function ContactForm() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="bg-destructive/10 border border-destructive text-destructive px-4 py-3 rounded-lg">
+                      <p className="font-semibold">Error</p>
+                      <p className="text-sm">{error}</p>
+                    </div>
+                  )}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name *</Label>
