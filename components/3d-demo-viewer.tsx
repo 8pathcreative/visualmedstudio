@@ -18,7 +18,7 @@ import {
 } from "lucide-react"
 
 // Simple 3D Heart Model Component
-function HeartModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef: React.Ref<THREE.Group> }) {
+function HeartModel() {
   return (
     <Html center>
       <div className="text-white text-center">
@@ -31,7 +31,7 @@ function HeartModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef:
   )
 }
 
-function BrainModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef: React.Ref<THREE.Group> }) {
+function BrainModel() {
   return (
     <Html center>
       <div className="text-white text-center">
@@ -44,7 +44,7 @@ function BrainModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef:
   )
 }
 
-function BoneModel({ isAnimating, modelRef }: { isAnimating: boolean; modelRef: React.Ref<THREE.Group> }) {
+function BoneModel() {
   return (
     <Html center>
       <div className="text-white text-center">
@@ -112,21 +112,21 @@ export default function Demo3DViewer() {
       title: "Interactive Heart Anatomy",
       description:
         "Explore a detailed 3D model of the human heart. Rotate, zoom, and pan to view anatomical structures. Toggle animation to see a simulated heartbeat.",
-      component: <HeartModel isAnimating={isAnimating} modelRef={modelRef} />,
+      component: <HeartModel />,
       icon: Heart,
     },
     brain: {
       title: "Brain Cross-Section Explorer",
       description:
         "Visualize the internal structures of the human brain. This demo showcases a simplified cross-section, highlighting major regions.",
-      component: <BrainModel isAnimating={isAnimating} modelRef={modelRef} />,
+      component: <BrainModel />,
       icon: Brain,
     },
     bone: {
       title: "Bone Structure Analysis",
       description:
         "An interactive look at bone composition and structure. This demo provides a basic representation of a long bone for educational purposes.",
-      component: <BoneModel isAnimating={isAnimating} modelRef={modelRef} />,
+      component: <BoneModel />,
       icon: Bone,
     },
     eye: {

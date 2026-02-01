@@ -73,12 +73,13 @@ const projectData = {
 
 // ✅ Define a specific type for the page props to avoid global conflicts.
 type ProjectPageProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 // Use the new type for the component's props.
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projectData[params.id as keyof typeof projectData]
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params
+  const project = projectData[id as keyof typeof projectData]
 
   if (!project) notFound()
 

@@ -102,8 +102,6 @@ export function PortfolioGallery() {
             <Card
               key={project.id}
               className={`glass-card hover-lift hover-glow transition-all duration-700 group animate-slide-in-up stagger-${(index % 6) + 1}`}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
             >
               <CardContent className="p-0">
                 <div className="relative overflow-hidden rounded-t-lg">
