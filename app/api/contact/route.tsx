@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { Resend } from "resend"
+import { createContactSubmission } from "@/lib/db"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -36,6 +37,21 @@ export async function POST(request: NextRequest) {
         { success: false, message: "Message must be at least 10 characters long" },
         { status: 400 }
       )
+    }
+
+    // Save to database
+    const dbResult = await createContactSubmission({
+      firstName,
+      lastName,
+      email,
+      organization: company,
+      projectType,
+      message,
+    })
+
+    if (!dbResult.success) {
+      console.error("[Contact API] Database error:", dbResult.error)
+      // Continue anyway - we'll still send emails
     }
 
     const adminEmail = process.env.ADMIN_EMAIL || "neilkhumphrey@gmail.com"
